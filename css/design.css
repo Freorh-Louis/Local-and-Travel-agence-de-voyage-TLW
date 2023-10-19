@@ -9,6 +9,7 @@
     margin-left: 32%;
     margin-right: 32%;
     background-color: lightgray;
+    position: absolute;
 }
 
 .footer-site li {
@@ -29,8 +30,7 @@
     background-color: lightgray;
 }
 
-.header-site li :hover {
-    padding: 5px 10px;
+.header-site li:hover {
     background-color: whitesmoke;
 }
 
