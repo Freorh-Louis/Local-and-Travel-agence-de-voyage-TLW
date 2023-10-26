@@ -6,10 +6,10 @@
 .footer-site {
     text-align: center;
     bottom: 0;
+    position: absolute;
     margin-left: 32%;
     margin-right: 32%;
     background-color: lightgray;
-    position: absolute;
 }
 
 .footer-site li {
@@ -64,5 +64,8 @@ h4 {
 
 body {
     background-color: whitesmoke;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 60px;
 }
 
