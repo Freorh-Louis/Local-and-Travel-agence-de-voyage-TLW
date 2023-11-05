@@ -1,11 +1,12 @@
-var tableau = {brehat : ["Ile-de-Bréhat","../images/brehat_principale.jpg",30], 
-etretat : ["Etretat","../images/etretat_principale.jpg",30],
-veules : ["Veules-les-roses", "../images/veules_principale.jpg",25],
-zalipie : ["Zalipie","../images/zalipie_principale.jpg",30],
-trujilo : ["Trujilo","../images/trujilo_principale.jpg",35],
-loguivy : ["Loguivy de la mer","../images/loguivy_principale.jpg",15],
-morella : ["Morella","../images/morella_principale.jpg",40],
-bled : ["Bled", "../images/bled_principale.jpg",40]};
+
+var tableau = {brehat : ["Ile-de-Bréhat","../images/brehat_principale.jpg","../images/brehat_1.jpg","../images/brehat_2.jpg","../images/brehat_3.jpg",30], 
+etretat : ["Etretat","../images/etretat_principale.jpg","../images/etretat_1.jpg","../images/etretat_2.jpg","../images/etretat_3.jpg",30],
+veules : ["Veules-les-roses", "../images/veules_principale.jpg","../images/veules_1.jpg","../images/veules_2.jpg","../images/veules_3.jpg",25],
+zalipie : ["Zalipie","../images/zalipie_principale.jpg","../images/zalipi_1.jpg","../images/zalipi_2.jpg","../images/zalipi_3.jpg",30],
+trujilo : ["Trujilo","../images/trujilo_principale.jpg","../images/trujilo_1.jpg","../images/trujilo_2.jpg","../images/trujilo_3.jpg",35],
+loguivy : ["Loguivy de la mer","../images/loguivy_principale.jpg","../images/loguivy_1.jpg","../images/loguivy_2.jpg","../images/loguivy_monument.jpg",15],
+morella : ["Morella","../images/morella_principale.jpg","../images/morella_1.jpg","../images/morella_2.jpg","../images/morella_3.jpg",40],
+bled : ["Bled", "../images/bled_principale.jpg","../images/bled_1.jpg","../images/bled_2.jpg","../images/bled_3.jpg",40]};
 
 
 
@@ -17,13 +18,15 @@ function updateDest() {
     u = new URLSearchParams(window.location.search);
     ville = u.get("dest");
     let nom = tableau[ville][0]; 
-    let img_principale = tableau[ville][1];
     document.getElementById("myp").textContent += " " + nom;
 
-    let image = document.createElement("img");
-    image.src = img_principale;
-    document.body.appendChild(image);
-    
+    var L = [];
+    for (var i = 0; i < 4; i++){
+        let image = document.createElement("img")
+        L.push(image);
+        L[i].src = tableau[ville][i + 1];
+        document.getElementById("img_grid").appendChild(L[i]);
+    }
 }
 
 
@@ -31,7 +34,7 @@ function updateDest() {
 
 
 function prix() {
-    let prix_jour = tableau[ville][2];
+    let prix_jour = tableau[ville][5];
     let arrivee = new Date(document.getElementById("arrivee").value);
     let depart = new Date(document.getElementById("depart").value);
     let nbr_jour = (depart.getTime() - arrivee.getTime()) / (1000*3600*24);

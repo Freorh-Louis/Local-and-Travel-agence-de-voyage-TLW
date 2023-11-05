@@ -1,0 +1,23 @@
+.photo {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    row-gap: 30px;
+}
+
+.photo img {
+    width : 500px;
+    height : 400px;
+}
+
+form {
+    position: absolute;
+    top: 30%;
+    margin-left: 42%;
+    
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
