@@ -10,10 +10,6 @@ bled : ["Bled", "../images/bled_principale.jpg","../images/bled_1.jpg","../image
 
 
 
-
-
-
-
 function updateDest() {
     u = new URLSearchParams(window.location.search);
     ville = u.get("dest");
@@ -28,8 +24,6 @@ function updateDest() {
         document.getElementById("img_grid").appendChild(L[i]);
     }
 }
-
-
 
 
 

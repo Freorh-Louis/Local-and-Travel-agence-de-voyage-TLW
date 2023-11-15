@@ -6,14 +6,14 @@
 }
 
 .photo img {
-    width : 500px;
-    height : 400px;
+    width : 55%;
+    height : 100%;
 }
 
 form {
     position: absolute;
-    top: 30%;
-    margin-left: 42%;
+    top: 21%;
+    margin-left: 41%;
     
 }
 
