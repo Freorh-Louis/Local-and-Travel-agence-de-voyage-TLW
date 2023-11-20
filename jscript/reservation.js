@@ -2,7 +2,7 @@
 var tableau = {brehat : ["Ile-de-Bréhat","../images/brehat_principale.jpg","../images/brehat_1.jpg","../images/brehat_2.jpg","../images/brehat_3.jpg",30], 
 etretat : ["Etretat","../images/etretat_principale.jpg","../images/etretat_1.jpg","../images/etretat_2.jpg","../images/etretat_3.jpg",30],
 veules : ["Veules-les-roses", "../images/veules_principale.jpg","../images/veules_1.jpg","../images/veules_2.jpg","../images/veules_3.jpg",25],
-zalipie : ["Zalipie","../images/zalipie_principale.jpg","../images/zalipi_1.jpg","../images/zalipi_2.jpg","../images/zalipi_3.jpg",30],
+zalipie : ["Zalipie","../images/zalipie_principale.jpg","../images/zalipie_1.jpg","../images/zalipie_2.jpg","../images/zalipie_3.jpg",30],
 trujilo : ["Trujilo","../images/trujilo_principale.jpg","../images/trujilo_1.jpg","../images/trujilo_2.jpg","../images/trujilo_3.jpg",35],
 loguivy : ["Loguivy de la mer","../images/loguivy_principale.jpg","../images/loguivy_1.jpg","../images/loguivy_2.jpg","../images/loguivy_monument.jpg",15],
 morella : ["Morella","../images/morella_principale.jpg","../images/morella_1.jpg","../images/morella_2.jpg","../images/morella_3.jpg",40],
