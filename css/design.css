@@ -14,7 +14,7 @@
 
 .footer-site li {
     display: inline-block;
-    margin: 0 20px;
+    padding: 0 20px;
     font-size: 15px;
 }
 
@@ -27,21 +27,21 @@
     margin: 0 30px;
     font-weight: bold;
     padding: 5px 10px;
-    background-color: lightgray;
-}
-
-.header-site li:hover {
     background-color: whitesmoke;
 }
 
-.voyage :hover{
+.header-site li:hover {
+    background-color: lightgray;
+}
+
+.voyage a :hover{
    opacity: 0.8;
 }
 
 
 .header-site nav{
     font-size: 20px;
-    background-color: gray;
+    background-color: lightblue;
     padding: 15px 0;
 }
 
@@ -51,6 +51,7 @@ a {
 }
 
 h1 {
+    margin-left: 5px;
     font: calibri;
     font-size: 40px;
 }
@@ -61,8 +62,8 @@ h2 {
 }
 
 h3 {
-    padding: 5px 10px;
-    background-color: whitesmoke;
+    padding: 10px 10px;
+    background-color: lightblue;
 }
 
 h4 {
@@ -71,11 +72,11 @@ h4 {
     text-align: center;
     margin: 60px 0;
     padding: 5px 10px;
-    background-color: whitesmoke;
+    background-color: lightblue;
 }
 
 body {
-    background-image: url("../images/image_fond2.jpg");
+    background-image: url("../images/image_fond3.jpg");
     background-repeat: no-repeat;
     background-position: center;
     min-height: 100vh;
