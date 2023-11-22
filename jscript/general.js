@@ -5,4 +5,3 @@ function header_footer() {
     $("#footer").load("footer.html");
 }
 
-`../images/${tab2[ville]}.jpg` 
