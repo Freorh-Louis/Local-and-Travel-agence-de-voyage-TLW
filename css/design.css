@@ -9,7 +9,7 @@
     position: absolute;
     margin-left: 32%;
     margin-right: 32%;
-    background-color: lightgray;
+    background-color: lightblue;
 }
 
 .footer-site li {
@@ -59,6 +59,8 @@ h1 {
 h2 {
     font: calibri;
     font-size: 30px;
+    background-color: lightblue;
+    padding: 10px 10px;
 }
 
 h3 {
