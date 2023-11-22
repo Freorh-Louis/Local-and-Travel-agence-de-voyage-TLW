@@ -7,6 +7,7 @@
     <link rel = "stylesheet" href = "../css/reservation.css">
     <title>Local and Travel</title>
     <script src = "../jscript/reservation.js"></script>
+    <script src = "../jscript/general.js"></script>
 </head>
 <body onload="updateDest()">
     <header class = "header-site">
@@ -21,23 +22,24 @@
 
     <div id = "img_grid" class = "photo"> </div>
 
-    <form>
+    <form id = "reservation_form" action = "panier.html" method = "get">
         Date d'arrivée : <br>
-        <input type = "date" id = "arrivee"> <br><br>
+        <input type = "date" name = "arrivee" id = "arrivee"> <br><br>
         Date de départ : <br>
-        <input type = "date" id = "depart"> <br><br>
+        <input type = "date" name = "depart" id = "depart"> <br><br>
         Nombre d'adultes : <br>
-        <input type = "number" id = "parents" onchange="prix()"> <br><br>
+        <input type = "number" name = "parents" id = "parents" onchange="prixF()"> <br><br>
         Nombre d'enfants (- de 12 ans) : <br>
-        <input type = "number" id = "enfants" onchange="prix()"> <br><br>
+        <input type = "number" name = "enfants" id = "enfants" onchange="prixF()"> <br><br>
         Petit déjeuner : 
-        <input type = "checkbox" id = "ptitdej" onchange="prix()"> <br><br>
-        <p id = "prix">Le prix de votre réservation est de 0€</p>
-        <input type = "submit" value = "Valider" formaction = "panier.html">
+        <input type = "checkbox" name = "ptitdej" id = "ptitdej" onchange="prixF()"> <br>
+        <p>Le prix de votre réservation est de :</p>
+        <output id = "prix"></output><br><br>
+        <input type = "hidden" name = "dest">
+        <input type = "hidden" name = "prix">
+        <input type = "submit" value = "Valider">
         <input type = "reset" value = "Effacer les informations">
     </form>
-
-
 
 
 
