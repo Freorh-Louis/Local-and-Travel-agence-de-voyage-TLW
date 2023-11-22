@@ -12,6 +12,7 @@
 
 
 <body>
+    
     <li class = "titre">
         <h1>Local and Travel</h1>
     </li>
@@ -23,52 +24,19 @@
         </nav>
     </header>
 
-    
     <h4> Choisissez parmis nos destinations vers de belles campagnes paisibles.</h4>
     
-    <div class = "matrice">
-        <div class = "voyage">
-            <h3>Bled, Slovénie</h3>
-            <a href = 'reservation.html?dest=bled'> <img src = "../images/bled_principale.jpg" alt = "Bled, Slovénie"/> </a>
-        </div>
+    <div class = "matrice" id="matrice">
+        
+        <template id = "ListeInfo">
+            
+            <div class = "voyage">
+                <h3>{{nom}}</h3>
+                <a href = "{{dest}}"><img src = "{{lien}}" alt = "{{nom}}"/> </a>
+            </div>
+        </template>
 
-        <div class = "voyage">
-            <h3>Île-de-Bréhat, Bretagne</h3>
-            <a href = 'reservation.html?dest=brehat'> <img src = "../images/brehat_principale.jpg" alt = "Île-de-Bréhat, Bretagne"/> </a>
-        </div>
-        
-        <div class = "voyage">
-            <h3>Etretat, France</h3>
-            <a href = 'reservation.html?dest=etretat'> <img src = "../images/etretat_principale.jpg" alt = "Etreta, France"/> </a>
-        </div>
-        <div class = "voyage">
-            <h3>Loguivy de la mer, Bretagne</h3>
-            <a href = 'reservation.html?dest=loguivy'> <img src = "../images/loguivy_principale.jpg" alt = "Loguivy de la mer, Bretagne"/> </a>
-        </div>
-       
-         <div class = "voyage">
-            <h3>Morella, Espagne</h3>
-            <a href = 'reservation.html?dest=morella'> <img src = "../images/morella_principale.jpg" alt = "Morella, Espagne"/> </a>
-        </div>
-        
-        <div class = "voyage">
-            <h3>Trujilo, Espagne</h3>
-            <a href = 'reservation.html?dest=trujilo'> <img src = "../images/trujilo_principale.jpg" alt = "Trujilo, Espagne"/> </a>
-        </div>
-        
-        <div class = "voyage">
-            <h3>Zalipie, Pologne</h3>
-            <a href = 'reservation.html?dest=zalipie'> <img src = "../images/zalipie_principale.jpg" alt = "Zalipie, Pologne "/> </a>
-
-        </div>
-        
-        <div class = "voyage">
-            <h3>Veules les roses, France</h3>
-            <a href = 'reservation.html?dest=veules'> <img src = "../images/veules_principale.jpg"  alt = "Veules les roses, France"></a>
-        </div>
-        
     </div>
-
 
     <footer class = "footer-site">
         <li> <p>Meilleure agence de voyage depuis le 19/10/2023</p> </li>
@@ -76,4 +44,5 @@
     </footer>
     
 </body>
+<script src ='../jscript/main_page.js'></script>
 </html>
