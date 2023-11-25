@@ -34,7 +34,53 @@ tab2 = [
     new Destination("Bled", "bled_principale","bled_1","bled_2","bled_3",40)
 ];
 
+function updateDest() {
+    u = new URLSearchParams(window.location.search);
+    ville = u.get("dest");
+    for (var i = 0; i < 8; i++) {
+        if (tab2[i]._ville === ville) {
+            var nom = tab2[i]._ville;
+            let image0 = document.createElement("img");
+            let image1 = document.createElement("img");
+            let image2 = document.createElement("img");
+            let image3 = document.createElement("img");
+            image0.src = tab2[i]._img0;
+            image1.src = tab2[i]._img1;
+            image2.src = tab2[i]._img2;
+            image3.src = tab2[i]._img3;
+            document.getElementById("img_grid").appendChild(image0);
+            document.getElementById("img_grid").appendChild(image1);
+            document.getElementById("img_grid").appendChild(image2);
+            document.getElementById("img_grid").appendChild(image3);
+            }
+    }
+    document.getElementById("myp").textContent += " " + nom;
 
+    let hidden_dest_input = document.getElementById("reservation_form").querySelector("[name=dest]");
+    hidden_dest_input.setAttribute("value", ville)
+}
+
+
+
+function prixF() {
+    for (var i = 0; i < 8; i++) {
+        if (tab2[i]._ville === ville) {
+            var prix_jour = tab2[i]._price;
+        }
+    }
+    let arrivee = new Date(document.getElementById("arrivee").value);
+    let depart = new Date(document.getElementById("depart").value);
+    let nbr_jour = (depart.getTime() - arrivee.getTime()) / (1000 * 3600 * 24);
+    let parents = document.getElementById("parents").value;
+    let enfants = document.getElementById("enfants").value;
+    let ptitdej = document.getElementById("ptitdej").checked;
+    let prix = nbr_jour * parents * prix_jour + 0.4 * nbr_jour * enfants * prix_jour + nbr_jour * (Number(parents) + Number(enfants)) * 15 * ptitdej;
+    document.getElementById("prix").value = `${prix} €`;
+    let hidden_prix_input = document.getElementById("reservation_form").querySelector("[name=prix]");
+    hidden_prix_input.setAttribute("value", prix)
+}
+
+/*
 function updateDest() {
     u = new URLSearchParams(window.location.search);
     ville = u.get("dest");
@@ -66,5 +112,5 @@ function prixF() {
     let hidden_prix_input = document.getElementById("reservation_form").querySelector("[name=prix]");
     hidden_prix_input.setAttribute("value", prix)
 }
-
+*/
 
