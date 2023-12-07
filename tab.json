@@ -3,23 +3,50 @@
         {
             "nom": "Bled, slovénie",
             "image": "../images/bled_principale.jpg",
-            "lien": "reservation.html?dest=bled"
+            "lien": "reservation.html?dest=bled",
+            "dest":"bled"
         },
         {
             "nom": "Ile-de-Bréhat, Bretagne",
             "image": "../images/brehat_principale.jpg",
-            "lien": "reservation.html?dest=b"
+            "lien": "reservation.html?dest=b",
+            "dest": "brehat"
         },
         {
             "nom": "Etretat, France",
             "image": "../images/etretat_principale.jpg",
-            "lien": "reservation.html?dest=etretat"
+            "lien": "reservation.html?dest=etretat",
+            "dest": "etretat"
         },
         {
-            "nom": "Bled, slovénie",
-            "image": "../images/bled_principale.jpg",
-            "lien": "reservation.html?dest=bled"
-        }
-        
+            "nom": "Veules les roses, France",
+            "image": "../images/veules_principale.jpg",
+            "lien": "reservation.html?dest=veules",
+            "dest": "veules"
+        },
+        {
+            "nom":"Zalipie, Pologne",
+            "image":"../images/zalipie_principale.jpg",
+            "lien":"reservation.html?dest=zalipie",
+            "dest": "zalipie"
+        },
+        {
+            "nom":"Trujilo, Espagne",
+            "image":"../images/trujilo_principale.jpg", 
+            "lien":"reservation.html?dest=trujilo",   
+            "dest": "trujilo"
+        },
+        {
+            "nom":"Loguivy de la mer",
+            "image":"../images/loguivy_principale.jpg", 
+            "lien":"reservation.html?dest=loguivy", 
+            "dest": "loguivy"
+        },
+        {
+            "nom":"Morella, Espagne",
+            "image":"../images/morella_principale.jpg", 
+            "lien":"reservation.html?dest=morella",  
+            "dest": "morella"
+        }  
     ]
 }

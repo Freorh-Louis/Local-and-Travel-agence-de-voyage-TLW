@@ -13,7 +13,7 @@
 </head>
 
 
-<body onload = "header_footer()">
+<body onload = "header_footer() ; remplacer_elements()">
     <li class = "titre">
         <h1>Local and Travel</h1>
     </li>
@@ -28,7 +28,7 @@
             
             <div class = "voyage">
                 <h3>{{nom}}</h3>
-                <a href = "{{dest}}"><img src = "{{lien}}" alt = "{{nom}}"/> </a>
+                <a href = "{{lien}}"><img src = "{{image}}" alt = "{{dest}}"/> </a>
             </div>
         </template>
 
@@ -36,6 +36,6 @@
 
     <div id = "footer"></div>
     
+    <script src ='../jscript/main_page.js'></script>
 </body>
-<script src ='../jscript/main_page.js'></script>
 </html>
