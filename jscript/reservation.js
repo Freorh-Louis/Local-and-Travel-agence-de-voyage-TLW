@@ -1,4 +1,46 @@
 
+async function updateDest() {
+    const u = new URLSearchParams(window.location.search);
+    ville = u.get("dest");
+    const response = await fetch("../jscript/tab.json");
+    json = await response.json();
+
+    let nom = json.tableau_reservation[ville][0];
+    document.getElementById("myp").textContent += nom;
+    
+    var template = document.getElementById("template_photo");
+
+    for (var i = 0; i < 4; i++) {
+        let clone = document.importNode(template.content, true);
+        new_content = clone.firstElementChild.innerHTML
+            .replace(/{{image}}/g, json.tableau_reservation[ville][i + 1])
+            .replace(/{{alt}}/g, "image " + json.tableau_reservation[ville][i + 1]);
+        clone.firstElementChild.innerHTML = new_content;
+        document.getElementById("img_grid").appendChild(clone);
+    }
+
+    let hidden_dest_input = document.getElementById("reservation_form").querySelector("[name=dest]");
+    hidden_dest_input.setAttribute("value", ville);
+}
+
+
+
+function prixF() {
+    let prix_jour = json.tableau_reservation[ville][5];
+    let arrivee = new Date(document.getElementById("arrivee").value);
+    let depart = new Date(document.getElementById("depart").value);
+    let nbr_jour = (depart.getTime() - arrivee.getTime()) / (1000 * 3600 * 24);
+    let parents = document.getElementById("parents").value;
+    let enfants = document.getElementById("enfants").value;
+    let ptitdej = document.getElementById("ptitdej").checked;
+    let prix = nbr_jour * parents * prix_jour + 0.4 * nbr_jour * enfants * prix_jour + nbr_jour * (Number(parents) + Number(enfants)) * 15 * ptitdej;
+    document.getElementById("prix").value = `${prix} €`;
+    let hidden_prix_input = document.getElementById("reservation_form").querySelector("[name=prix]");
+    hidden_prix_input.setAttribute("value", prix)
+}
+
+
+/*
 class Destination{
     constructor(ville, img0, img1, img2, img3, price){
     this._ville  = ville;
@@ -9,19 +51,6 @@ class Destination{
     this._price = price;
 }
 }
-
-
-/*
-var tableau = {brehat : ["Ile-de-Bréhat","brehat_principale","brehat_1","brehat_2","brehat_3",30], 
-etretat : ["Etretat","etretat_principale","etretat_1","etretat_2","etretat_3",30],
-veules : ["Veules-les-roses", "veules_principale","veules_1","veules_2","veules_3",25],
-zalipie : ["Zalipie","zalipie_principale","zalipie_1","zalipie_2","zalipie_3",30],
-trujilo : ["Trujilo","trujilo_principale","trujilo_1","trujilo_2","trujilo_3",35],
-loguivy : ["Loguivy de la mer","loguivy_principale","loguivy_1","loguivy_2","loguivy_monument",15],
-morella : ["Morella","morella_principale","morella_1","morella_2","morella_3",40],
-bled : ["Bled", "bled_principale","bled_1","bled_2","bled_3",40]};
- */
-
 
 tab2 = [
     new Destination("Ile-de-Bréhat","brehat_principale","brehat_1","brehat_2","brehat_3",30),
@@ -78,39 +107,8 @@ function prixF() {
     document.getElementById("prix").value = `${prix} €`;
     let hidden_prix_input = document.getElementById("reservation_form").querySelector("[name=prix]");
     hidden_prix_input.setAttribute("value", prix)
-}
-
-/*
-function updateDest() {
-    u = new URLSearchParams(window.location.search);
-    ville = u.get("dest");
-    let nom = tableau[ville][0];
-    document.getElementById("myp").textContent += " " + nom;
-
-    for (var i = 0; i < 4; i++) {
-        let image = document.createElement("img")
-        image.src = tableau[ville][i + 1];
-        document.getElementById("img_grid").appendChild(image);
-    }
-
-    let hidden_dest_input = document.getElementById("reservation_form").querySelector("[name=dest]");
-    hidden_dest_input.setAttribute("value", ville)
-}
+}*/
 
 
 
-function prixF() {
-    let prix_jour = tableau[ville][5];
-    let arrivee = new Date(document.getElementById("arrivee").value);
-    let depart = new Date(document.getElementById("depart").value);
-    let nbr_jour = (depart.getTime() - arrivee.getTime()) / (1000 * 3600 * 24);
-    let parents = document.getElementById("parents").value;
-    let enfants = document.getElementById("enfants").value;
-    let ptitdej = document.getElementById("ptitdej").checked;
-    let prix = nbr_jour * parents * prix_jour + 0.4 * nbr_jour * enfants * prix_jour + nbr_jour * (Number(parents) + Number(enfants)) * 15 * ptitdej;
-    document.getElementById("prix").value = `${prix} €`;
-    let hidden_prix_input = document.getElementById("reservation_form").querySelector("[name=prix]");
-    hidden_prix_input.setAttribute("value", prix)
-}
-*/
 

@@ -10,13 +10,19 @@
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src = "../jscript/general.js"></script>
 </head>
-<body onload = "updateDest()" onload = "header_footer()">
+<body onload = "updateDest(); header_footer()">
     
     <div id = "header"></div>
     
     <h2 id = "myp">Votre réservation pour </h2>
 
-    <div id = "img_grid" class = "photo"> </div>
+    <div id = "img_grid" class = "photo">
+        <template id = "template_photo">
+            <div class = "div_img">
+                <img src = "../images/{{image}}.jpg" alt = "{{alt}}">
+            </div>
+        </template>
+    </div>
 
     <form id = "reservation_form" action = "panier.html" method = "get">
         Date d'arrivée : <br>
