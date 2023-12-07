@@ -9,7 +9,7 @@
         {
             "nom": "Ile-de-Bréhat, Bretagne",
             "image": "../images/brehat_principale.jpg",
-            "lien": "reservation.html?dest=b",
+            "lien": "reservation.html?dest=brehat",
             "dest": "brehat"
         },
         {

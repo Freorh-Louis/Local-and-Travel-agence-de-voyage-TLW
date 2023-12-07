@@ -10,6 +10,7 @@
     margin-left: 32%;
     margin-right: 32%;
     background-color: lightblue;
+    border-radius: 30px;
 }
 
 .footer-site li {
@@ -24,6 +25,7 @@
 
 .header-site li {
     display: inline-block;
+    border-radius: 30px;
     margin: 0 30px;
     font-weight: bold;
     padding: 5px 10px;
@@ -43,6 +45,7 @@
     font-size: 20px;
     background-color: lightblue;
     padding: 15px 0;
+    border-radius: 30px;
 }
 
 a {
@@ -61,17 +64,20 @@ h2 {
     font-size: 30px;
     background-color: lightblue;
     padding: 10px 10px;
+    border-radius: 30px;
 }
 
 h3 {
     padding: 10px 10px;
     background-color: lightblue;
+    border-radius: 30px;
 }
 
 h4 {
     font: calibri;
     font-size: 25px;
     text-align: center;
+    border-radius: 30px;
     margin: 60px 0;
     padding: 5px 10px;
     background-color: lightblue;
