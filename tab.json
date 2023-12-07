@@ -1,0 +1,25 @@
+{
+    "tableau_main_page" :[
+        {
+            "nom": "Bled, slovénie",
+            "image": "../images/bled_principale.jpg",
+            "lien": "reservation.html?dest=bled"
+        },
+        {
+            "nom": "Ile-de-Bréhat, Bretagne",
+            "image": "../images/brehat_principale.jpg",
+            "lien": "reservation.html?dest=b"
+        },
+        {
+            "nom": "Etretat, France",
+            "image": "../images/etretat_principale.jpg",
+            "lien": "reservation.html?dest=etretat"
+        },
+        {
+            "nom": "Bled, slovénie",
+            "image": "../images/bled_principale.jpg",
+            "lien": "reservation.html?dest=bled"
+        }
+        
+    ]
+}
