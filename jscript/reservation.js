@@ -2,7 +2,7 @@
 async function updateDest() {
     const u = new URLSearchParams(window.location.search);
     ville = u.get("dest");
-    const response = await fetch("../jscript/tab.json");
+    const response = await fetch("../tab.json");
     json = await response.json();
 
     let nom = json.tableau_reservation[ville][0];
