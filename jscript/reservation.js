@@ -6,10 +6,40 @@ async function updateDest() {
     json = await response.json();
 
     let nom = json.tableau_reservation[ville][0];
+    let parisiens = "non";
+    let animaux = "non";
+    let ptitdej = "non";
+
+
+    if (json.tableau_reservation[ville][7]){
+        parisiens = "oui"} 
+    else {
+        parisiens = "non"
+    }
+
+    if (json.tableau_reservation[ville][6]){
+        animaux = "oui"} 
+    else {
+        animaux = "non"
+    }
+     
+    if (json.tableau_reservation[ville][8]){
+        ptitdej = "oui"} 
+    else {
+        ptitdej = "non"
+    }
+    
+    
+    document.getElementById("myp").textContent += nom;
+    document.getElementById("auto_parisiens").textContent += parisiens;
+    document.getElementById("auto_animaux").textContent += animaux;
+    
+
+    
     document.getElementById("myp").textContent += nom;
     
     var template = document.getElementById("template_photo");
-
+    
     for (var i = 0; i < 4; i++) {
         let clone = document.importNode(template.content, true);
         new_content = clone.firstElementChild.innerHTML
@@ -18,6 +48,9 @@ async function updateDest() {
         clone.firstElementChild.innerHTML = new_content;
         document.getElementById("img_grid").appendChild(clone);
     }
+    
+     
+    
 
     let hidden_dest_input = document.getElementById("reservation_form").querySelector("[name=dest]");
     hidden_dest_input.setAttribute("value", ville);

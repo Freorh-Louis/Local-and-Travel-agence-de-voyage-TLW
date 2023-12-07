@@ -9,7 +9,7 @@
         {
             "nom": "Ile-de-Bréhat, Bretagne",
             "image": "../images/brehat_principale.jpg",
-            "lien": "reservation.html?dest=b",
+            "lien": "reservation.html?dest=brehat",
             "dest": "brehat"
         },
         {
@@ -51,13 +51,13 @@
     ],
 
     "tableau_reservation" :{
-        "brehat" : ["Ile-de-Bréhat","brehat_principale","brehat_1","brehat_2","brehat_3",30], 
-        "etretat" : ["Etretat","etretat_principale","etretat_1","etretat_2","etretat_3",30],
-        "veules" : ["Veules-les-roses", "veules_principale","veules_1","veules_2","veules_3",25],
-        "zalipie" : ["Zalipie","zalipie_principale","zalipie_1","zalipie_2","zalipie_3",30],
-        "trujilo" : ["Trujilo","trujilo_principale","trujilo_1","trujilo_2","trujilo_3",35],
-        "loguivy" : ["Loguivy de la mer","loguivy_principale","loguivy_1","loguivy_2","loguivy_monument",15],
-        "morella" : ["Morella","morella_principale","morella_1","morella_2","morella_3",40],
-        "bled" : ["Bled", "bled_principale","bled_1","bled_2","bled_3",40]
+        "brehat" : [ "Ile-de-Bréhat","brehat_principale", "brehat_1", "brehat_2", "brehat_3", 30, true, false, true], 
+        "etretat" : [ "Etretat", "etretat_principale", "etretat_1", "etretat_2", "etretat_3", 30, true, false, false],
+        "veules" : [ "Veules-les-roses", "veules_principale", "veules_1", "veules_2", "veules_3", 25, false, false, false],
+        "zalipie" : [ "Zalipie", "zalipie_principale", "zalipie_1", "zalipie_2", "zalipie_3", 30, false, true, false],
+        "trujilo" : [ "Trujilo","trujilo_principale","trujilo_1", "trujilo_2", "trujilo_3", 35, true, true, false],
+        "loguivy" : [ "Loguivy de la mer", "loguivy_principale", "loguivy_1", "loguivy_2", "loguivy_monument",15,true, true, false],
+        "morella" : [ "Morella", "morella_principale", "morella_1", "morella_2", "morella_3", 40, true, true, false],
+        "bled" : [ "Bled", "bled_principale", "bled_1", "bled_2", "bled_3", 40, true, true, false]
         }
 }
