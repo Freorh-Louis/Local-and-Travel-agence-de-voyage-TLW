@@ -1,24 +1,50 @@
 
-function test() {
-    let u = new URLSearchParams(window.location.search);
-    if (u.get("ptitdej") === "on") {
-        var dej = "oui";
-    } else {
-        var dej = "non";
+function stockage_reservation() {
+    const u = new URLSearchParams(window.location.search);
+
+    if (sessionStorage.getItem("tab") === null) {
+        sessionStorage.tab = "[]";
     }
 
-    let res = {duree : `Du ${u.get("arrivee")} jusqu'au ${u.get("depart")}`,
-    parents : `Adultes : ${u.get("parents")}`, enfants : `Enfants : ${u.get("enfants")}`, ptitdej : `dej`, prix : `u.get("prix")`}
-    
-    
+    if (u.get("dest") !== null) {
+        if (u.get("ptitdej") === "on") {
+            var dej = "oui";
+        } else {
+            var dej = "non";
+        }
 
-    let reservation = document.createElement("div");
-    let image = document.createElement("img");
-    for (var i = 0; i < 5; i++) {
-        let li = document.createElement("li");
-        let txt = document.createElement("p");
+        var reservation = {
+            dest : u.get("dest"),
+            arrivee : u.get("arrivee"),
+            depart : u.get("depart"),
+            parents : u.get("parents"),
+            enfants : u.get("enfants"),
+            ptitdej : dej,
+            prix : u.get("prix"),
+            image : `${u.get("dest")}_principale`
+        }
 
+        var tab = JSON.parse(sessionStorage.tab);
+        tab.push(reservation);
+        sessionStorage.tab = JSON.stringify(tab);
     }
+}
 
-    document.getElementById("test").textContent = prix;
+function affichage_panier() {
+    var template = document.getElementById("template_reservation");
+    const tab = JSON.parse(sessionStorage.getItem("tab"));
+    for (const e of tab) {
+        let clone = document.importNode(template.content, true);
+        new_content = clone.firstElementChild.innerHTML
+            .replace(/{{dest}}/g, e.dest)
+            .replace(/{{image}}/g, e.image)
+            .replace(/{{arrivee}}/g, e.arrivee)
+            .replace(/{{depart}}/g, e.depart)
+            .replace(/{{parents}}/g, e.parents)
+            .replace(/{{enfants}}/g, e.enfants)
+            .replace(/{{ptitdej}}/g, e.ptitdej)
+            .replace(/{{prix}}/g, e.prix);
+        clone.firstElementChild.innerHTML = new_content;
+        document.body.appendChild(clone);
+    }
 }
