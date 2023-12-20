@@ -10,7 +10,7 @@
             "nom": "Ile-de-Bréhat, Bretagne",
             "image": "../images/brehat_principale.jpg",
             "lien": "reservation.html?dest=brehat",
-            "dest": "brehat"
+            "dest": "île-de-Bréhat"
         },
         {
             "nom": "Etretat, France",
@@ -22,7 +22,7 @@
             "nom": "Veules les roses, France",
             "image": "../images/veules_principale.jpg",
             "lien": "reservation.html?dest=veules",
-            "dest": "veules"
+            "dest": "veules-les-roses"
         },
         {
             "nom":"Zalipie, Pologne",
@@ -31,10 +31,10 @@
             "dest": "zalipie"
         },
         {
-            "nom":"Trujilo, Espagne",
+            "nom":"Trujillo, Espagne",
             "image":"../images/trujilo_principale.jpg", 
             "lien":"reservation.html?dest=trujilo",   
-            "dest": "trujilo"
+            "dest": "trujillo"
         },
         {
             "nom":"Loguivy de la mer",

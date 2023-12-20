@@ -34,3 +34,17 @@
     padding: 5px 10px;
     
 }
+
+
+.voyage li {
+    display: inline-block;
+    margin: 5px 20px;
+    padding: 0 15px;
+    border-radius: 30px;
+    background-color: lightblue;
+}
+
+.voyage h3 {
+    margin: 10px 32px;
+    padding: 10px 10px;
+}

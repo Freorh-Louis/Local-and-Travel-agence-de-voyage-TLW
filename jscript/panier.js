@@ -13,6 +13,8 @@ function stockage_reservation() {
             var dej = "non";
         }
 
+        var tab = JSON.parse(sessionStorage.tab);
+
         var reservation = {
             dest : u.get("dest"),
             arrivee : u.get("arrivee"),
@@ -21,12 +23,15 @@ function stockage_reservation() {
             enfants : u.get("enfants"),
             ptitdej : dej,
             prix : u.get("prix"),
-            image : `${u.get("dest")}_principale`
+            image : `${u.get("dest")}_principale`,
+            id : tab.length
         }
-
-        var tab = JSON.parse(sessionStorage.tab);
+        
         tab.push(reservation);
         sessionStorage.tab = JSON.stringify(tab);
+
+        window.history.pushState("", "", "panier.html");
+        
     }
 }
 
@@ -43,8 +48,18 @@ function affichage_panier() {
             .replace(/{{parents}}/g, e.parents)
             .replace(/{{enfants}}/g, e.enfants)
             .replace(/{{ptitdej}}/g, e.ptitdej)
-            .replace(/{{prix}}/g, e.prix);
+            .replace(/{{prix}}/g, e.prix)
+            .replace(/{{id}}/g, e.id);
         clone.firstElementChild.innerHTML = new_content;
         document.body.appendChild(clone);
     }
+}
+
+function supprimer_dest(reservation) {
+    var tab = JSON.parse(sessionStorage.getItem("tab"));
+    const id = reservation.getAttribute("id");
+    tab.splice(id);
+    sessionStorage.tab = JSON.stringify(tab);
+
+    reservation.parentElement.parentElement.remove();
 }

@@ -33,10 +33,7 @@ async function updateDest() {
     document.getElementById("myp").textContent += nom;
     document.getElementById("auto_parisiens").textContent += parisiens;
     document.getElementById("auto_animaux").textContent += animaux;
-    
 
-    
-    document.getElementById("myp").textContent += nom;
     
     var template = document.getElementById("template_photo");
     
@@ -49,9 +46,11 @@ async function updateDest() {
         document.getElementById("img_grid").appendChild(clone);
     }
     
-     
+    let today = new Date().toISOString().split("T")[0];
+    document.getElementById("arrivee").setAttribute("min", today);
+    document.getElementById("depart").setAttribute("min", today);
     
-
+    
     let hidden_dest_input = document.getElementById("reservation_form").querySelector("[name=dest]");
     hidden_dest_input.setAttribute("value", ville);
 }

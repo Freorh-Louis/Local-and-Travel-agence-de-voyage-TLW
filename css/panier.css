@@ -1,0 +1,23 @@
+
+.grid_panier {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: lightblue;
+    margin: 30px 5%;
+    padding-bottom: 10px;
+    border-radius: 30px;
+}
+
+.panier_image {
+    text-align: center;
+}
+
+.panier_image img{
+    width: 80%;
+    height: 80%;
+    border-radius: 30px;
+}
+
+.panier_resume p{
+    font-size: 18px;
+}
