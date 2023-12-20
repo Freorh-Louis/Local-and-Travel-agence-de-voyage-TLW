@@ -9,11 +9,12 @@
     <link rel = "stylesheet" href = "../css/main_page.css">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src = "../jscript/general.js"></script>
+    
     <title>Local and Travel</title>
 </head>
 
 
-<body onload = "header_footer() ; remplacer_elements()">
+<body onload = "header_footer() ; elements_()">
     <li class = "titre">
         <h1>Local and Travel</h1>
     </li>
@@ -22,35 +23,38 @@
     
     <h4> Choisissez parmis nos destinations vers de belles campagnes paisibles.</h4>
     
+    <script src ='../jscript/main_page.js'></script>
+    
+    
     <form id = "filtre_form" action = "main_page.html" method = "get">
         
         Filtre</br>
         <label>Prix à la journée (€) :</label>
-        <input type="range" id="filtre_prix" name = filtre_prix min="0" max="40" oninput=" filtre_prix_disp.value = filtre_prix.value">
-        <output  id="filtre_prix_disp"></output>
+        <input type = "range" id = "filtre_prix" name = filtre_prix min = "0" max = "40" value = "40" onchange = " Input(filtre_prix.value, filtre_animaux.value) " >
+        <output  id = "filtre_prix_disp"></output>
         
         <label>Animaux autorisés:</label>
-        <input type = "checkbox" name = filtre_animaux id = filtre_animaux>
+        <input type = "checkbox" name = filtre_animaux id = filtre_animaux   checked onchange = "Input(filtre_prix.value, filtre_animaux.value)">
         
         <label>Parisiens autorisés:</label>
-        <input type = "checkbox" name = filtre_parisiens id = "filtre_parisiens">
+        <input type = "checkbox" name = filtre_parisiens id = "filtre_parisiens"  checked onchange = "Input(filtre_prix.value, filtre_animaux.value)">
         
-        <label>Petit déjeuner inclus:</label>
-        <input type = "checkbox" name = "ptitdej" id = "filtre_ptitdej">
+        <input type = "button" value = "Supprimer les filtres" onclick = "elements_()">
+        
 
     </form>
-    <script src ='../jscript/main_page.js'></script>
+    
 
 
+    <template id = "ListeInfo">
+            
+        <div class = "voyage">
+            <h3>{{nom}}</h3>
+            <a href = "{{lien}}"><img src = "{{image}}" alt = "{{dest}}"/> </a>
+        </div>
+    </template>
     <div class = "matrice" id="matrice">
         
-        <template id = "ListeInfo">
-            
-            <div class = "voyage">
-                <h3>{{nom}}</h3>
-                <a href = "{{lien}}"><img src = "{{image}}" alt = "{{dest}}"/> </a>
-            </div>
-        </template>
 
     </div>
 

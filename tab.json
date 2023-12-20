@@ -34,7 +34,7 @@
             "nom":"Trujilo, Espagne",
             "image":"../images/trujilo_principale.jpg", 
             "lien":"reservation.html?dest=trujilo",   
-            "dest": "trujilo"
+            "dest": "trujillo"
         },
         {
             "nom":"Loguivy de la mer",
@@ -52,11 +52,11 @@
 
     "tableau_reservation" :{
         "brehat" : [ "Ile-de-Bréhat","brehat_principale", "brehat_1", "brehat_2", "brehat_3", 30, true, false, true], 
-        "etretat" : [ "Etretat", "etretat_principale", "etretat_1", "etretat_2", "etretat_3", 30, true, false, false],
-        "veules" : [ "Veules-les-roses", "veules_principale", "veules_1", "veules_2", "veules_3", 25, false, false, false],
+        "etretat" : [ "Etretat", "etretat_principale", "etretat_1", "etretat_2", "etretat_3", 30, true, true, false],
+        "veules" : [ "Veules-les-roses", "veules_principale", "veules_1", "veules_2", "veules_3", 25, false, true, false],
         "zalipie" : [ "Zalipie", "zalipie_principale", "zalipie_1", "zalipie_2", "zalipie_3", 30, false, true, false],
-        "trujilo" : [ "Trujilo","trujilo_principale","trujilo_1", "trujilo_2", "trujilo_3", 35, true, true, false],
-        "loguivy" : [ "Loguivy de la mer", "loguivy_principale", "loguivy_1", "loguivy_2", "loguivy_monument",15,true, true, false],
+        "trujillo" : [ "Trujillo","trujillo_principale","trujillo_1", "trujillo_2", "trujillo_3", 35, true, true, false],
+        "loguivy" : [ "Loguivy de la mer", "loguivy_principale", "loguivy_1", "loguivy_2", "loguivy_3", 15,true, true, true],
         "morella" : [ "Morella", "morella_principale", "morella_1", "morella_2", "morella_3", 40, true, true, false],
         "bled" : [ "Bled", "bled_principale", "bled_1", "bled_2", "bled_3", 40, true, true, false]
         }

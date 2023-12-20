@@ -1,4 +1,8 @@
 
+
+
+
+
 async function updateDest() {
     const u = new URLSearchParams(window.location.search);
     ville = u.get("dest");
@@ -6,41 +10,40 @@ async function updateDest() {
     json = await response.json();
 
     let nom = json.tableau_reservation[ville][0];
-    let parisiens = "non";
-    let animaux = "non";
-    let ptitdej = "non";
+   
 
 
     if (json.tableau_reservation[ville][7]){
-        parisiens = "oui"} 
+        const parisiens = "oui"} 
     else {
-        parisiens = "non"
+        const parisiens = "non"
     }
 
     if (json.tableau_reservation[ville][6]){
-        animaux = "oui"} 
+        const animaux = "oui"} 
     else {
-        animaux = "non"
+        const animaux = "non"
     }
      
     if (json.tableau_reservation[ville][8]){
-        ptitdej = "oui"} 
+        const ptitdej = "oui"} 
     else {
-        ptitdej = "non"
+        const ptitdej = "non"
     }
     
     
     document.getElementById("myp").textContent += nom;
     document.getElementById("auto_parisiens").textContent += parisiens;
     document.getElementById("auto_animaux").textContent += animaux;
-    
+    document.getElementById("ptitdej").textContent += ptitdej;
 
     
     document.getElementById("myp").textContent += nom;
     
     var template = document.getElementById("template_photo");
     
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 4; i++){
+        
         let clone = document.importNode(template.content, true);
         new_content = clone.firstElementChild.innerHTML
             .replace(/{{image}}/g, json.tableau_reservation[ville][i + 1])
