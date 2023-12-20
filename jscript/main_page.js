@@ -88,9 +88,10 @@ async function remplacer_elements() {
     }
 }
 
-function elements_() {
+async function elements_() {
 
-    fetch('..//tab.json').then(r=>r.json()).then(tabjson=>{
+        let reponse = await fetch('..//tab.json');
+        let tabjson = await reponse.json();
         let template = document.querySelector("#ListeInfo");
 
     
@@ -101,18 +102,22 @@ function elements_() {
         for (const d of tabjson.tableau_main_page) {
              
             let clone = document.importNode(template.content, true);
+            const response_weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${d.dest}&appid=282109da4d041c390ef73b146fe01605&units=metric&lang=fr`);
+            const json_weather = await response_weather.json();
     
             newContent = clone.firstElementChild.innerHTML
                 .replace(/{{lien}}/g, d.lien)
                 .replace(/{{image}}/g, d.image)
                 .replace(/{{nom}}/g, d.nom)
-                .replace(/{{dest}}/g, d.dest);
+                .replace(/{{dest}}/g, d.dest)
+                .replace(/{{meteo}}/g, json_weather.weather[0].description)
+                .replace(/{{temp}}/g, json_weather.main.temp);
             clone.firstElementChild.innerHTML = newContent;
     
             document.querySelector("#matrice").appendChild(clone);
             
     
         }
-    });
+    }
     
-}
+

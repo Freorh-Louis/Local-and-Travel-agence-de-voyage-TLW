@@ -12,7 +12,7 @@ async function updateDest() {
     let nom = json.tableau_reservation[ville][0];
    
 
-
+    /*
     if (json.tableau_reservation[ville][7]){
         const parisiens = "oui"} 
     else {
@@ -32,10 +32,11 @@ async function updateDest() {
     }
     
     
-    document.getElementById("myp").textContent += nom;
+    
     document.getElementById("auto_parisiens").textContent += parisiens;
     document.getElementById("auto_animaux").textContent += animaux;
-document.getElementById("ptitdej").textContent += ptitdej;
+    document.getElementById("ptitdej").textContent += ptitdej;*/
+    document.getElementById("myp").textContent += nom;
     
     var template = document.getElementById("template_photo");
     
