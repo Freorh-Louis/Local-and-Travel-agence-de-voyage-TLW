@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "../css/design.css">
+    <link rel = "stylesheet" href = "../css/panier.css">
     <script src = "../jscript/panier.js"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src = "../jscript/general.js"></script>
@@ -16,17 +17,22 @@
     <h2>Votre panier</h2>
 
     <template id = "template_reservation">
-        <div>
-            <h3>Votre voyage pour {{dest}}</h3>
-            <img src = "../images/{{image}}.jpg">
-            <h3>Résumé de la commande :</h3>
-            <p>
-                Dates : du {{arrivee}} au {{depart}}<br>
-                Parents : {{parents}}<br>
-                Enfants : {{enfants}}<br>
-                Petit déjeuner : {{ptitdej}}<br>
-                Prix : {{prix}} €
-            </p>
+        <div class = "grid_panier">
+            <div class = "panier_image">
+                <h3>Votre voyage pour {{dest}}</h3>
+                <img src = "../images/{{image}}.jpg">
+            </div>
+            <div class = "panier_resume">
+                <h3>Résumé de la commande :</h3>
+                <p>
+                    Dates : du {{arrivee}} au {{depart}}<br>
+                    Parents : {{parents}}<br>
+                    Enfants : {{enfants}}<br>
+                    Petit déjeuner : {{ptitdej}}<br>
+                    Prix : {{prix}} €
+                </p>
+                <input type = "button" value = "Supprimer la commande" id = "{{id}}" onclick = "supprimer_dest(this)">
+            </div>
         </div>
     </template>
 
