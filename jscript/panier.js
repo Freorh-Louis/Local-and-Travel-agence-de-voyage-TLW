@@ -1,3 +1,14 @@
+// fichier JavaScript pour la page panier
+// Louis Vincent - Hugo Prigent
+// 21/12/2023
+// To do:
+
+
+
+
+// fonction stockage de la reservation une fois faite
+// entree : aucune
+// sortie : creation d'un tableau avec le bilan de la reservation
 
 function stockage_reservation() {
     const u = new URLSearchParams(window.location.search);
@@ -35,6 +46,10 @@ function stockage_reservation() {
     }
 }
 
+// Fonction affichant une page présentant le panier
+// entree : aucune 
+// sortie : page avec toute les infos sur la réservation
+
 function affichage_panier() {
     var template = document.getElementById("template_reservation");
     const tab = JSON.parse(sessionStorage.getItem("tab"));
@@ -54,6 +69,12 @@ function affichage_panier() {
         document.body.appendChild(clone);
     }
 }
+
+
+
+// Fonction permettant de supprimer une destination
+// entree : destination (tableau)
+// sortie : efface la reservation (page vide)
 
 function supprimer_dest(reservation) {
     var tab = JSON.parse(sessionStorage.getItem("tab"));

@@ -32,8 +32,8 @@
         },
         {
             "nom":"Trujillo, Espagne",
-            "image":"../images/trujilo_principale.jpg", 
-            "lien":"reservation.html?dest=trujilo",   
+            "image":"../images/trujillo_principale.jpg", 
+            "lien":"reservation.html?dest=trujillo",   
             "dest": "trujillo"
         },
         {
