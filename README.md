@@ -4,18 +4,22 @@
 Projet TLW création d'un site d'agence de voyage
 Louis Vincent - Hugo Prigent
 
+Cette agence de voyage est spécialisée dans les destinations campagnardes.
 
-Travail effectué par Louis:
-- API pour la météeo
+
+Travail effectué par Louis: environ 60% du projet
+- API pour la météo
 - page panier
 - reservation.js 
 - panier.js 
 - header et footer dynamique
+- page de payment
 
 
-Travail effectué par Hugo:
+Travail effectué par Hugo: environ 40% du projet
 - templates de la page principale pour les destination
 - filtre
 - mise en JSON des infos codées en dures
 - page principale
+- commentaire du code
 

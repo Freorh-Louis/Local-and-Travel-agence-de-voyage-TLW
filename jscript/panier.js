@@ -84,3 +84,17 @@ function supprimer_dest(reservation) {
 
     reservation.parentElement.parentElement.remove();
 }
+
+
+// Fonction permettant d'envoyer sur la page de payement
+// entree : le tableau stocker
+// sortie : envoie sur la page de commande avec le montant à payer
+
+function payement() {
+    var tab = JSON.parse(sessionStorage.getItem("tab"));
+    var montant = 0;
+    for (var e of tab) {
+        montant += Number(e.prix);
+    }
+    window.location.href = `commande.html?prix=${montant}`;
+}
