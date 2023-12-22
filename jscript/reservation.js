@@ -18,30 +18,33 @@ async function updateDest() {
     let nom = json.tableau_reservation[ville][0];
    
 
-    /*
+    
     if (json.tableau_reservation[ville][7]){
-        const parisiens = "oui"} 
+        parisiens = " oui "
+        } 
     else {
-        const parisiens = "non"
+        parisiens = " non "
     }
-
+   
+    
     if (json.tableau_reservation[ville][6]){
-        const animaux = "oui"} 
+        animaux = " oui ";} 
     else {
-        const animaux = "non"
+        animaux = " non ";
     }
      
     if (json.tableau_reservation[ville][8]){
-        const ptitdej = "oui"} 
+        ptitdej = " oui ";} 
     else {
-        const ptitdej = "non"
+        ptitdej = " non ";
     }
     
     
     
-    document.getElementById("auto_parisiens").textContent += parisiens;
+    
+    document.getElementById("auto_parisiens").textContent += await parisiens;
     document.getElementById("auto_animaux").textContent += animaux;
-    document.getElementById("ptitdej").textContent += ptitdej;*/
+    document.getElementById("ptitdej").textContent += ptitdej;
     document.getElementById("myp").textContent += nom;
     
     var template = document.getElementById("template_photo");

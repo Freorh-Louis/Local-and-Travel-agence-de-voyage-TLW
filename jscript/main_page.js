@@ -40,18 +40,18 @@ async function est_affichable(ville){
     var valide = false;
     
     // Recuperation des entrées du filtres:
-    var s_filtre_animaux = document.getElementById("filtre_animaux").checked;
-    var s_filtre_parisiens = document.getElementById("filtre_parisiens").checked;
-    var s_filtre_prix = document.getElementById("filtre_prix").value;
+    s_filtre_animaux = document.getElementById("filtre_animaux").checked;
+    s_filtre_parisiens = document.getElementById("filtre_parisiens").checked;
+    s_filtre_prix = document.getElementById("filtre_prix").value;
     
-    
+     
     // Conditions pour afficher une destination 
     c2 = tabjson.tableau_reservation[ville][7] == s_filtre_parisiens; 
     c3 = tabjson.tableau_reservation[ville][6] == s_filtre_animaux;
     c1 = tabjson.tableau_reservation[ville][5] <= s_filtre_prix;
 
     // Correspondance ou non avec le filtre
-    if ( c1 && c2 && c3){
+    if ( c1 && c2 && c3 ){
         valide = true;
     }
     
@@ -77,7 +77,7 @@ async function filtrer_elements() {
     document.querySelector("#matrice").innerHTML = "";
     
     for (const d of tabjson.tableau_main_page) {
-        
+        console.log(d.dest)
         
         if (await est_affichable(d.dest)){
             
@@ -89,7 +89,7 @@ async function filtrer_elements() {
             .replace(/{{lien}}/g, d.lien)
             .replace(/{{image}}/g, d.image)
             .replace(/{{nom}}/g, d.nom)
-            .replace(/{{dest}}/g, d.dest)
+            .replace(/{{dest}}/g, tabjson.tableau_reservation[d.dest][0])
             .replace(/{{meteo}}/g, json_weather.weather[0].description)
             .replace(/{{temp}}/g, json_weather.main.temp);
         clone.firstElementChild.innerHTML = newContent;
@@ -112,7 +112,7 @@ async function elements_() {
 
     
     
-        //Boucle permettant d'afficher les destinations en fcontion du filtre
+        //Boucle permettant d'afficher les destinations en fonction du filtre
         document.querySelector("#matrice").innerHTML = "";
         
         for (const d of tabjson.tableau_main_page) {
