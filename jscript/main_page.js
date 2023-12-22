@@ -84,7 +84,7 @@ async function filtrer_elements() {
         let clone = document.importNode(template.content, true);
         const response_weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${d.dest}&appid=282109da4d041c390ef73b146fe01605&units=metric&lang=fr`);
         const json_weather = await response_weather.json();
-
+        
         newContent = clone.firstElementChild.innerHTML
             .replace(/{{lien}}/g, d.lien)
             .replace(/{{image}}/g, d.image)

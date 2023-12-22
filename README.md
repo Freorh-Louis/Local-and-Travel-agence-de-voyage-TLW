@@ -8,10 +8,17 @@ Louis Vincent - Hugo Prigent
 Travail effectué par Louis:
 - API pour la météeo
 - page panier
-- 
+- page reservation
+-
+-
+-
+-
+-
+
 
 Travail effectué par Hugo:
 - templates de la page principale pour les destination
 - filtre
 - mise en JSON des infos codées en dures
 - page principale
+
