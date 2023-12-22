@@ -8,8 +8,8 @@
         },
         {
             "nom": "Ile-de-Bréhat, Bretagne",
-            "image": "../images/brehat_principale.jpg",
-            "lien": "reservation.html?dest=brehat",
+            "image": "../images/île-de-bréhat_principale.jpg",
+            "lien": "reservation.html?dest=île-de-bréhat",
             "dest": "île-de-bréhat"
         },
         {
@@ -20,8 +20,8 @@
         },
         {
             "nom": "Veules les roses, France",
-            "image": "../images/veules_principale.jpg",
-            "lien": "reservation.html?dest=veules",
+            "image": "../images/veules-les-roses_principale.jpg",
+            "lien": "reservation.html?dest=veules-les-roses",
             "dest": "veules-les-roses"
         },
         {
@@ -51,9 +51,9 @@
     ],
 
     "tableau_reservation" :{
-        "île-de-bréhat" : [ "Ile-de-Bréhat","brehat_principale", "brehat_1", "brehat_2", "brehat_3", 30, true, false, true], 
+        "île-de-bréhat" : [ "Ile-de-Bréhat","île-de-bréhat_principale", "brehat_1", "brehat_2", "brehat_3", 30, true, false, true], 
         "etretat" : [ "Etretat", "etretat_principale", "etretat_1", "etretat_2", "etretat_3", 30, true, true, false],
-        "veules-les-roses" : [ "Veules-les-roses", "veules_principale", "veules_1", "veules_2", "veules_3", 25, false, true, false],
+        "veules-les-roses" : [ "Veules-les-roses", "veules-les-roses_principale", "veules_1", "veules_2", "veules_3", 25, false, true, false],
         "zalipie" : [ "Zalipie", "zalipie_principale", "zalipie_1", "zalipie_2", "zalipie_3", 30, false, true, false],
         "trujillo" : [ "Trujillo","trujillo_principale","trujillo_1", "trujillo_2", "trujillo_3", 35, true, true, false],
         "loguivy" : [ "Loguivy de la mer", "loguivy_principale", "loguivy_1", "loguivy_2", "loguivy_3", 15,true, true, true],
