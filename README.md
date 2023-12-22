@@ -8,12 +8,9 @@ Louis Vincent - Hugo Prigent
 Travail effectué par Louis:
 - API pour la météeo
 - page panier
-- page reservation
--
--
--
--
--
+- reservation.js 
+- panier.js 
+- header et footer dynamique
 
 
 Travail effectué par Hugo:

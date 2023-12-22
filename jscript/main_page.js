@@ -1,7 +1,7 @@
 // fichier JavaScript pour la page principale
 // Louis Vincent - Hugo Prigent
 // 21/12/2023
-// To do:
+// To do: fini
 
 
 //classe info, permettant d'attribuer le nom de la ville "ville"(str), 

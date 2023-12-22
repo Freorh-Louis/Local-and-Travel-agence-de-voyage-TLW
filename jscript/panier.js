@@ -1,7 +1,7 @@
 // fichier JavaScript pour la page panier
 // Louis Vincent - Hugo Prigent
 // 21/12/2023
-// To do:
+// To do: fini
 
 
 
