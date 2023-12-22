@@ -17,7 +17,7 @@
     <link rel = "stylesheet" href = "../css/main_page.css">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src = "../jscript/general.js"></script>
-    
+    <script src ='../jscript/main_page.js'></script>
     <title>Local and Travel</title>
 </head>
 
@@ -31,36 +31,35 @@
     
     <h4> Choisissez parmis nos destinations vers de belles campagnes paisibles.</h4>
     
-    <script src ='../jscript/main_page.js'></script>
-    
-    
-    <form id = "filtre_form" action = "main_page.html" method = "get">
-        
-        Filtre</br>
-        <label>Prix à la journée (€) :</label>
-        <input type = "range" id = "filtre_prix" name = filtre_prix min = "0" max = "40" value = "40" onchange = " Input(filtre_prix.value, filtre_animaux.value) " >
-        <output  id = "filtre_prix_disp"></output>
-        
-        <label>Animaux autorisés:</label>
-        <input type = "checkbox" name = filtre_animaux id = "filtre_animaux"  checked onchange = "Input(filtre_prix.value, filtre_animaux.value)">
-        
-        <label>Parisiens autorisés:</label>
-        <input type = "checkbox" name = filtre_parisiens id = "filtre_parisiens"  checked onchange = "Input(filtre_prix.value, filtre_animaux.value)">
-        
-        <input type = "button" value = "Supprimer les filtres" onclick = "elements_()">
-        
-
-    </form>
-    
+    <div class = "filter">
+        <li>
+            <form id = "filtre_form" action = "main_page.html" method = "get">
+                
+                Filtre :</br>
+                <label>Prix à la journée (€) :</label>
+                <input type = "range" id = "filtre_prix" name = filtre_prix min = "0" max = "40" value = "40" onchange = " Input(filtre_prix.value, filtre_animaux.value) " > 
+                <output  id = "filtre_prix_disp"></output> <br>
+                
+                <label>Animaux autorisés:</label>
+                <input type = "checkbox" name = filtre_animaux id = "filtre_animaux"  checked onchange = "Input(filtre_prix.value, filtre_animaux.value)"> <br>
+                
+                <label>Parisiens autorisés:</label>
+                <input type = "checkbox" name = filtre_parisiens id = "filtre_parisiens"  checked onchange = "Input(filtre_prix.value, filtre_animaux.value)"> <br><br> 
+                
+                <input type = "button" value = "Supprimer les filtres" onclick = "elements_()">
+                
+            </form>
+        </li>
+    </div>
 
 
     <template id = "ListeInfo">
             
         <div class = "voyage">
             <h3>{{nom}}</h3>
-            <a href = "{{lien}}"><img src = "{{image}}" alt = "{{dest}}"/> </a>
-                <li><p>Météo : {{meteo}}</p></li>
-                <li><p>Température : {{temp}} °C</p></li>
+            <a href = "{{lien}}"><img src = "{{image}}" alt = "{{dest}}"/> </a> <br>
+            <li><p>Météo : {{meteo}}</p></li>
+            <li><p>Température : {{temp}} °C</p></li>
         </div>
     </template>
     <div class = "matrice" id="matrice">
