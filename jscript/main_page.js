@@ -33,7 +33,7 @@ function Input(v1, v2, v3) {
 
 async function est_affichable(ville){
     
-    let reponse = await fetch('..//tab.json');
+    let reponse = await fetch('../tab.json');
     let tabjson = await reponse.json();
 
 
@@ -46,8 +46,8 @@ async function est_affichable(ville){
     
      
     // Conditions pour afficher une destination 
-    c2 = tabjson.tableau_reservation[ville][7] == s_filtre_parisiens; 
-    c3 = tabjson.tableau_reservation[ville][6] == s_filtre_animaux;
+    c2 = tabjson.tableau_reservation[ville][7] === s_filtre_parisiens; 
+    c3 = tabjson.tableau_reservation[ville][6] === s_filtre_animaux;
     c1 = tabjson.tableau_reservation[ville][5] <= s_filtre_prix;
 
     // Correspondance ou non avec le filtre
@@ -67,7 +67,7 @@ async function est_affichable(ville){
 
 async function filtrer_elements() {
 
-    let reponse = await fetch('..//tab.json');
+    let reponse = await fetch('../tab.json');
     let tabjson = await reponse.json();
     let template = document.querySelector("#ListeInfo");
 
@@ -106,7 +106,7 @@ async function filtrer_elements() {
 
 async function elements_() {
 
-        let reponse = await fetch('..//tab.json');
+        let reponse = await fetch('../tab.json');
         let tabjson = await reponse.json();
         let template = document.querySelector("#ListeInfo");
 
@@ -120,7 +120,7 @@ async function elements_() {
             let clone = document.importNode(template.content, true);
             const response_weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${d.dest}&appid=282109da4d041c390ef73b146fe01605&units=metric&lang=fr`);
             const json_weather = await response_weather.json();
-    
+            
             newContent = clone.firstElementChild.innerHTML
                 .replace(/{{lien}}/g, d.lien)
                 .replace(/{{image}}/g, d.image)
